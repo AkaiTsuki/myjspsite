@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="portfolioAdmin" namespace="/portfolio/secu" extends="struts-default">
+		<action name="addImage">
+			<result>/portfolio/imageUpload.jsp</result>
+		</action>
+		<action name="removeImage" class="portfolio.RemoveImageAction">
+			<result name="success">imageRemoved.jsp</result>
+		</action>
+		<action name="adminPortfolio" class="portfolio.AdminPortfolioAction">
+			<result name="success">adminPortfolio.jsp</result>
+		</action>
+		<action name="uploadImage" class="portfolio.UploadImage">
+			<result name="success">/portfolio/imageAdded.jsp</result>
+		</action>
+	</package>   
+	
+	<package name="portfolio" namespace="/portfolio" extends="struts-default">
+		<action name="register" class="portfolio.RegisterAction">
+			<result name="success">/portfolio/imageUpload.jsp</result>
+			<result name="input">/portfolio/register.jsp</result>
+		</action>
+	</package>
+
+</struts>
