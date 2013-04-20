@@ -10,9 +10,12 @@
    
 
     <package name="default" namespace="/" extends="struts-default">
-		
+		<action name="*">
+			<result>/{1}.jsp</result>
+		</action>
     </package>
 
     <include file="helloworld.xml"/>
 	<include file="portfolio.xml"/>
+	<include file="recipe.xml"/>
 </struts>

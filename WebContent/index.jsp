@@ -14,6 +14,7 @@
 	<ul>
 		<li><a href="helloworld/helloworld.jsp">Hello World</a></li>
 		<li><a href="portfolio/login.jsp">Portfolio</a></li>
+		<li><a href="recipe/projectDescription">Recipe</a></li>
 	</ul>
 </body>
 </html>

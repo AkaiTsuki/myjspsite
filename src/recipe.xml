@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="recipe" namespace="/recipe" extends="struts-default">
+		<action name="*">
+			<result>/recipe/{1}.jsp</result>
+		</action>
+		<action name="newRecipe" class="recipe.NewRecipe">
+			<result name="success">/recipe/view.jsp</result>
+			<result name="input">/recipe/recipe.jsp</result>
+		</action>
+		<action name="searchRecipe" class="recipe.SearchRecipe">
+			<result name="success">/recipe/view.jsp</result>
+			<result name="input">/recipe/search.jsp</result>
+		</action>
+	</package>	
+</struts>
